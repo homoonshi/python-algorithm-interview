@@ -1,12 +1,12 @@
 import collections
 
 # CREATE PALINDROME
-# 1. input hansu's english name
-# 2. and make palindrome with alphabet of hansu's english name
+# 1. input hansoo's english name
+# 2. and make palindrome with alphabet of hansoo's english name
 
-hansu_e_name = input()
-Alphabet=collections.Counter(hansu_e_name)
-# the number of alphabets of hansu's english name
+hansoo_e_name = input()
+Alphabet=collections.Counter(hansoo_e_name)
+# the number of alphabets of hansoo's english name
 # 한수의 영어 이름 알파벳 개수를 세서 딕셔너리로 정리한다.
 
 Alphabet=dict(sorted(Alphabet.items(),reverse=True))
@@ -18,6 +18,7 @@ for Alphabet_num in (Alphabet.values()):
     if(Alphabet_num%2!=0):
         Odd+=1
         if Odd>=2:
+            print(Odd)
             print("I'm Sorry Hansoo")
             exit()
 # 알파벳의 개수가 홀수인 알파벳이 2개 이상인지 확인한다.
