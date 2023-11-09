@@ -1,4 +1,5 @@
-#List Comprehension, Counter
+#List Comprehension
+
 import collections
 import re
 
@@ -9,9 +10,12 @@ def mostCommonWord(paragraph : str, banned : list[str]) -> str :
     words = [word for word in re.sub(r'[^\w]',' ',paragraph).lower().split()
          if word not in banned]
 
-    counts = collections.Counter(words)
+    counts = collections.defaultdict(int)
 
-    return counts.most_common(1)[0][0]
+    for word in words:
+        counts[word]+=1
+
+    return max(counts,key=counts.get())
 
 print(mostCommonWord(paragraph,banned))
 

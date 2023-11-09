@@ -17,3 +17,6 @@ def valid_Palindrome(s : str)->bool:
     return True
 
 print(valid_Palindrome(s))
+
+
+

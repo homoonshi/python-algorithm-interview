@@ -19,6 +19,8 @@ def longestpalindrome(s:str)->str:
     for i in range(len(s)-1) :
 
         result = max(result, expand(i,i+1), expand(i,i+2), key=len)
+        # expand(i,i+1) 은 붙어 있는 두 값이 같을 때 반환
+        # expand(i,i+2) 는 가운데 값을 기준으로 양 옆의 값이 같을 때 반환
 
     return result
 
