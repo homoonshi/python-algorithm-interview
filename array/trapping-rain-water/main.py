@@ -13,7 +13,7 @@ def trap(height:list[int])->int :
         left_max=max(height[left],left_max)
         right_max=max(height[right],right_max)
 
-        if(left_max<=right_max):
+        if(left_max<=right_max): # 둘중 더 낮은 쪽이 높은 쪽으로 이동
             volume+=left_max-height[left]
             left+=1
         else:
@@ -23,3 +23,4 @@ def trap(height:list[int])->int :
     return volume
 
 print(trap(water))
+

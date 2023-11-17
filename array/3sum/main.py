@@ -1,11 +1,10 @@
 #brute-force
 
 num=list(map(int,input().split()))
-num=sorted(num)
 
-def threesum(nums:list[int])->list[int]:
+def threesum(nums:list[int])->list[list[int]]:
 
-    sum=0
+    nums.sort()
     output=[]
 
     for i in range(0,len(nums)-2):

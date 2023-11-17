@@ -17,3 +17,4 @@ def arrayPairSum(nums : list[int]) -> int:
     return sum
 
 print(arrayPairSum(num))
+

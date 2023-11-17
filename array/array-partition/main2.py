@@ -1,4 +1,4 @@
-#
+# calculate even-number value
 
 num = list(map(int,input().split()))
 
@@ -13,3 +13,4 @@ def arrayPairSum(nums : list[int])->int :
     return sum
 
 print(arrayPairSum(num))
+
